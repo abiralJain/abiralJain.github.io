@@ -1,15 +1,17 @@
 import React from 'react'
+import { SkeletonTheme } from 'react-loading-skeleton'
 import { makeStyles } from '@material-ui/styles'
 import Img1 from '../assets/DesignPageImgs/headers/uiDesigns.png'
 import Img2 from '../assets/DesignPageImgs/headers/3dDesigns.png'
+
 import UI1 from '../assets/DesignPageImgs/ui-designs/u1.png'
 import UI2 from '../assets/DesignPageImgs/ui-designs/u2.png'
 import UI3 from '../assets/DesignPageImgs/ui-designs/u3.png'
 import UI4 from '../assets/DesignPageImgs/ui-designs/u4.png'
 import UI5 from '../assets/DesignPageImgs/ui-designs/u5.png'
 import TD1 from '../assets/DesignPageImgs/3d-designs/i1.png'
-import TD2 from '../assets/DesignPageImgs/3d-designs/I2.gif'
-import TD3 from '../assets/DesignPageImgs/3d-designs/I3.gif'
+import TD2 from '../assets/DesignPageImgs/3d-designs/i2.gif'
+import TD3 from '../assets/DesignPageImgs/3d-designs/i3.gif'
 import TD4 from '../assets/DesignPageImgs/3d-designs/i4.png'
 import TD5 from '../assets/DesignPageImgs/3d-designs/i5.png'
 
@@ -87,37 +89,39 @@ const DesignPage = () => {
     const classes = useStyles()
     return (
         <div>
-            <div className={classes.cont}>
-                <img className={classes.titleImg} src={Img1} alt={'UI Design'} />
-                <p className={classes.titleText}>
-                    As a designer, I've been practicing to sharpen my skills and shape some fun
-                    stories. Each of these designs contains a unique style and according to that, I
-                    try to design UI.
-                </p>
-                <div className={classes.imgCont1}>
-                    <img src={UI1} alt={'Design 1'} />
-                    <img src={UI2} alt={'Design 2'} />
-                    <img src={UI3} alt={'Design 3'} />
-                    <div>
-                        <img src={UI4} alt={'Design 4'} />
-                        <img src={UI5} alt={'Design 5'} />
+            <SkeletonTheme baseColor={'#393939'} highlightColor={'#444'}>
+                <div className={classes.cont}>
+                    <img className={classes.titleImg} src={Img1} alt={'UI Design'} />
+                    <p className={classes.titleText}>
+                        As a designer, I've been practicing to sharpen my skills and shape some fun
+                        stories. Each of these designs contains a unique style and according to
+                        that, I try to design UI.
+                    </p>
+                    <div className={classes.imgCont1}>
+                        <img src={UI1} alt={'Design 1'} />
+                        <img src={UI2} alt={'Design 2'} />
+                        <img src={UI3} alt={'Design 3'} />
+                        <div>
+                            <img src={UI4} alt={'Design 4'} />
+                            <img src={UI5} alt={'Design 5'} />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className={classes.cont}>
-                <img className={classes.titleImg} src={Img2} alt={'3d Design'} />
-                <p className={classes.titleText}>
-                    Created some 3d designs on Cinema 4d just to know how 3d designs are made and
-                    how we can play with the animation.
-                </p>
-                <div className={classes.imgCont2}>
-                    <img src={TD1} alt={'3D 1'} />
-                    <img src={TD2} alt={'3D 2'} />
-                    <img src={TD3} alt={'3D 3'} />
-                    <img src={TD4} alt={'3D 4'} />
-                    <img src={TD5} alt={'3D 5'} />
+                <div className={classes.cont}>
+                    <img className={classes.titleImg} src={Img2} alt={'3d Design'} />
+                    <p className={classes.titleText}>
+                        Created some 3d designs on Cinema 4d just to know how 3d designs are made
+                        and how we can play with the animation.
+                    </p>
+                    <div className={classes.imgCont2}>
+                        <img src={TD1} alt={'3D 1'} />
+                        <img src={TD2} alt={'3D 2'} />
+                        <img src={TD3} alt={'3D 3'} />
+                        <img src={TD4} alt={'3D 4'} />
+                        <img src={TD5} alt={'3D 5'} />
+                    </div>
                 </div>
-            </div>
+            </SkeletonTheme>
         </div>
     )
 }

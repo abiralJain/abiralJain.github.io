@@ -8,24 +8,28 @@ const useStyles = makeStyles(({ breakpoints }) => ({
         margin: '40px 0',
         display: 'flex',
         justifyContent: 'space-between',
-        [breakpoints.down('sm')]: {
+        [breakpoints.down('md')]: {
             flexDirection: 'column'
         }
     },
     aboutHeaderLeft: {
         width: '40%',
 
-        [breakpoints.down('sm')]: {
+        [breakpoints.down('md')]: {
             width: '100%'
         }
     },
     aboutHeaderRight: {
         width: '35%',
         '& img': {
-            width: '100%'
+            width: '100%',
+
+            [breakpoints.between('md', 'md')]: {
+                width: '80%'
+            }
         },
 
-        [breakpoints.down('sm')]: {
+        [breakpoints.down('md')]: {
             width: '100%',
             marginBottom: '2em'
         }
@@ -106,7 +110,7 @@ const AboutPage = () => {
                     <p className={classes.heading2}>
                         I’m <span>Abiral Jain ✌</span>
                     </p>
-                    <Hidden mdUp>
+                    <Hidden lgUp>
                         <div className={classes.aboutHeaderRight}>
                             <img src={ProfileImg} alt={'Abiral Jain'} />
                         </div>
@@ -123,7 +127,7 @@ const AboutPage = () => {
                         people.
                     </p>
                 </div>
-                <Hidden smDown>
+                <Hidden mdDown>
                     <div className={classes.aboutHeaderRight}>
                         <img src={ProfileImg} alt={'Abiral Jain'} />
                     </div>

@@ -68,16 +68,15 @@ const useStyles = makeStyles(({ breakpoints }) => ({
         display: 'flex',
         flexDirection: 'column',
 
-        '& img': {
+        '& div img': {
             marginBottom: '10em',
-            height: '1.6em',
-            width: 'fit-content'
+            height: '1.6em'
         },
 
         [breakpoints.down('sm')]: {
             padding: '3em 4em 2em 2em',
 
-            '& img': {
+            '& div img': {
                 height: '1.2em',
                 marginBottom: '3em'
             }
@@ -168,6 +167,8 @@ const Projects = () => {
                 </p>
             </div>
             <div
+                data-aos="fade-up"
+                data-aos-once="true"
                 className={classes.cardRoot}
                 style={{
                     backgroundImage: `url(${
@@ -175,7 +176,9 @@ const Projects = () => {
                     }), linear-gradient(to bottom right, #303030, #414141, #303030, #414141, #303030) `
                 }}
             >
-                <img src={CollegeMateLogo} alt={'College Mate'} />
+                <div>
+                    <img src={CollegeMateLogo} alt={'College Mate'} />
+                </div>
                 <p className={classes.cardRole}>SOLO DESIGNER</p>
                 <p className={classes.cardTitle}>
                     A WEBSITE THAT MAKES YOUR COLLEGE LIFE IS EASIER.
@@ -195,10 +198,14 @@ const Projects = () => {
                 </MuiLink>
             </div>
             <div
+                data-aos="fade-up"
+                data-aos-once="true"
                 className={classes.cardRoot}
                 style={{ backgroundImage: `url(${matches ? UdantaBgResp : UdantaBg})` }}
             >
-                <img src={UdantaLogo} alt={'Udanta'} />
+                <div>
+                    <img src={UdantaLogo} alt={'Udanta'} width={'120em'} />
+                </div>
                 <p className={classes.cardRole}>UI/UX DESIGNER</p>
                 <p className={classes.cardTitle}>DESIGNING A QUICK/EASY NEWS APP</p>
                 <p className={classes.cardDescription}>
@@ -216,6 +223,8 @@ const Projects = () => {
                 </MuiLink>
             </div>
             <div
+                data-aos="fade-up"
+                data-aos-once="true"
                 className={classes.cardRoot}
                 style={{
                     backgroundImage: `url(${
@@ -223,7 +232,9 @@ const Projects = () => {
                     }), linear-gradient(to bottom right, #303030, #414141, #303030, #414141, #303030)  `
                 }}
             >
-                <img src={AmInLogo} alt={'I Am In'} />
+                <div>
+                    <img src={AmInLogo} alt={'I Am In'} width={'180em'} />
+                </div>
                 <p className={classes.cardRole}>UI DESIGNER</p>
                 <p className={classes.cardTitle}>CREATING BETTER PAYMENT EXPERIENCE FOR CHILDREN</p>
                 <p className={classes.cardDescription}>
@@ -240,6 +251,8 @@ const Projects = () => {
                 </MuiLink>
             </div>
             <div
+                data-aos="fade-up"
+                data-aos-once="true"
                 className={classes.cardRoot}
                 style={{
                     backgroundImage: `url(${
@@ -247,7 +260,9 @@ const Projects = () => {
                     }), linear-gradient(to bottom right, #303030, #414141, #303030, #414141, #303030) `
                 }}
             >
-                <img src={PractiseLogo} alt={'Practise'} />
+                <div>
+                    <img src={PractiseLogo} alt={'Practise'} width={'180em'} />
+                </div>
                 <p className={classes.cardRole}>DESIGNER</p>
                 <p className={classes.cardTitle}>3D & UI DESIGN PRACTICE CHALLENGES</p>
                 <p className={classes.cardDescription}>
